@@ -2,14 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Styled Statistics Table</title>
+    <style>
+        /* Using a clean, modern font for the page */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Main container for the table to add padding and centering */
+        .table-container {
+            width: 80%;
+            max-width: 900px;
+        }
+
+        /* Core table styling */
+        .stats-table {
+            width: 100%;
+            /* Collapses borders for a single, clean line */
+            border-collapse: collapse; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden; /* Ensures the border-radius is applied to the corners */
+        }
+        
+        /* Table caption styling */
+        .stats-table caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 15px;
+            color: #333;
+            caption-side: top;
+        }
+
+        /* Styling for the table header */
+        .stats-table thead {
+            background-color: #0057b7; /* A strong blue for the header */
+            color: #ffffff;
+        }
+        
+        .stats-table th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Styling for the table body cells */
+        .stats-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0; /* Light line between rows */
+        }
+        
+        /* Applying a striped pattern to the rows for readability */
+        .stats-table tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Adding a hover effect for user interaction */
+        .stats-table tbody tr:hover {
+            background-color: #e2efff; /* A light blue on hover */
+            cursor: pointer;
+        }
+
+        /* Styling for the last row to avoid a double border at the bottom */
+        .stats-table tbody tr:last-of-type {
+            border-bottom: 2px solid #0057b7;
+        }
+
+        /* Highlighting the highest run-scorer */
+        .highlight {
+            font-weight: bold;
+            color: #0057b7;
+        }
+    </style>
 </head>
 <body>
-    <!-- add table here -->
 
-        
+    <div class="table-container">
+        <table class="stats-table">
+            <caption>T20 World Cup 2024: Top Indian Batters</caption>
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Matches</th>
+                    <th>Runs</th>
+                    <th>Average</th>
+                    <th>Strike Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Virat Kohli</td>
+                    <td>8</td>
+                    <td class="highlight">319</td> <td>63.80</td>
+                    <td>137.91</td>
+                </tr>
+                <tr>
+                    <td>Rohit Sharma</td>
+                    <td>8</td>
+                    <td>257</td>
+                    <td>36.71</td>
+                    <td>156.70</td>
+                </tr>
+                <tr>
+                    <td>Rishabh Pant</td>
+                    <td>8</td>
+                    <td>171</td>
+                    <td>28.50</td>
+                    <td>128.57</td>
+                </tr>
+                <tr>
+                    <td>Axar Patel</td>
+                    <td>8</td>
+                    <td>103</td>
+                    <td>25.75</td>
+                    <td>149.27</td>
+                </tr>
+                 <tr>
+                    <td>Suryakumar Yadav</td>
+                    <td>7</td>
+                    <td>199</td>
+                    <td>33.16</td>
+                    <td>137.24</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
